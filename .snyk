@@ -2,7 +2,7 @@
 version: v1.25.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
-  SNYK-JAVA-ORGYAML-3152153:
+  SNYK-JAVA-ORGYAML-*:
     - '*':
         reason: Fix not yet merged - https://github.com/request/request/pull/3444
         expires: 2025-07-21T21:12:33.979Z
