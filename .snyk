@@ -2,9 +2,42 @@
 version: v1.25.0
 # ignores vulnerabilities until expiry date; change duration by modifying expiry date
 ignore:
-  SNYK-JAVA-ORGYAML-*:
+  SNYK-JAVA-ORGYAML-3152153:
     - '*':
         reason: Fix not yet merged - https://github.com/request/request/pull/3444
         expires: 2025-07-21T21:12:33.979Z
         created: 2023-04-21T21:12:33.983Z
+  SNYK-JAVA-ORGYAML-6056527:
+      - '*':
+          reason: Fix not yet merged - https://github.com/request/request/pull/3444
+          expires: 2025-07-21T21:12:33.979Z
+          created: 2023-04-21T21:12:33.983Z
+  SNYK-JAVA-ORGYAML-2806360:
+        - '*':
+            reason: Fix not yet merged - https://github.com/request/request/pull/3444
+            expires: 2025-07-21T21:12:33.979Z
+            created: 2023-04-21T21:12:33.983Z
+  SNYK-JAVA-ORGYAML-3016891:
+          - '*':
+              reason: Fix not yet merged - https://github.com/request/request/pull/3444
+              expires: 2025-07-21T21:12:33.979Z
+              created: 2023-04-21T21:12:33.983Z
+  SNYK-JAVA-ORGYAML-3016888:
+            - '*':
+                reason: Fix not yet merged - https://github.com/request/request/pull/3444
+                expires: 2025-07-21T21:12:33.979Z
+                created: 2023-04-21T21:12:33.983Z
+  SNYK-JAVA-ORGYAML-3113851:
+              - '*':
+                  reason: Fix not yet merged - https://github.com/request/request/pull/3444
+                  expires: 2025-07-21T21:12:33.979Z
+                  created: 2023-04-21T21:12:33.983Z
+  SNYK-JAVA-ORGYAML-3016889:
+                - '*':
+                    reason: Fix not yet merged - https://github.com/request/request/pull/3444
+                    expires: 2025-07-21T21:12:33.979Z
+                    created: 2023-04-21T21:12:33.983Z
+
+
+
 patch: {}
