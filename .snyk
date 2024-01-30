@@ -37,6 +37,16 @@ ignore:
                     reason: Fix not yet merged - https://github.com/request/request/pull/3444
                     expires: 2025-07-21T21:12:33.979Z
                     created: 2023-04-21T21:12:33.983Z
+  SNYK-JAVA-COMH2DATABASE-31685:
+                  - '*':
+                      reason: Fix not yet merged - https://github.com/request/request/pull/3444
+                      expires: 2025-07-21T21:12:33.979Z
+                      created: 2023-04-21T21:12:33.983Z
+  SNYK-JAVA-COMH2DATABASE-3146851:
+                    - '*':
+                        reason: Fix not yet merged - https://github.com/request/request/pull/3444
+                        expires: 2025-07-21T21:12:33.979Z
+                        created: 2023-04-21T21:12:33.983Z
 
 
 
