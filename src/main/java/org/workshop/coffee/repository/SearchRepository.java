@@ -19,7 +19,9 @@ public class SearchRepository {
     DataSource dataSource;
 
     public List<Product> searchProduct (String input) {
-        return null;
+        //create sql query with product_name or description
+        String sql = "SELECT * FROM product WHERE product_name LIKE '%"+ input + "%' OR description LIKE '%" + input +"%'";
+        return em.createNativeQuery(sql, Product.class).getResultList();
     }
 
 }
