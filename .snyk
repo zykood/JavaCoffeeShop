@@ -1,0 +1,212 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.19.0
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  dummy:
+  - '*':
+      reason: Just a dummy
+      expires: 1970-01-01T19:26:08.142000Z
+  SNYK-JAVA-ORGYAML-2806360:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:39.682000Z
+  SNYK-JAVA-ORGYAML-3016888:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:49:57.266000Z
+  SNYK-JAVA-ORGYAML-3016889:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:50:52.454000Z
+  SNYK-JAVA-ORGYAML-3016891:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:49:48.204000Z
+  SNYK-JAVA-ORGYAML-3113851:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:50:56.112000Z
+  SNYK-JAVA-ORGYAML-3152153:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:47:17.312000Z
+  SNYK-JAVA-ORGYAML-6056527:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:43.831000Z
+  SNYK-JAVA-COMH2DATABASE-31685:
+  - '*':
+      reason:
+      expires: 2024-05-02T20:46:19.424000Z
+  SNYK-JAVA-ORGTHYMELEAF-1915389:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:47:36.041000Z
+  SNYK-JAVA-ORGTHYMELEAF-5811866:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:46:54.973000Z
+  SNYK-JAVA-COMH2DATABASE-1769238:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:46:51.579000Z
+  SNYK-JAVA-COMH2DATABASE-2331071:
+  - '*':
+      reason:
+      expires: 2024-05-02T20:46:00.512000Z
+  SNYK-JAVA-COMH2DATABASE-2348247:
+  - '*':
+      reason:
+      expires: 2024-05-02T20:46:29.332000Z
+  SNYK-JAVA-COMH2DATABASE-3146851:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:47:39.425000Z
+  SNYK-JAVA-ORGTHYMELEAFEXTRAS-572299:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:19.149000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORK-2330878:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:50:42.978000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORK-2434828:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:50:39.970000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORK-2436751:
+  - '*':
+      reason:
+      expires: 2024-05-02T20:45:40.312000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORK-2689634:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:50:00.398000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORK-2823313:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:49:11.290000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORK-3369749:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:50:37.036000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORK-3369852:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:46:58.831000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORK-5422217:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:50.821000Z
+  SNYK-JAVA-ORGAPACHETOMCATEMBED-2414084:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:59.282000Z
+  SNYK-JAVA-ORGAPACHETOMCATEMBED-3035793:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:50:49.067000Z
+  SNYK-JAVA-ORGAPACHETOMCATEMBED-3097829:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:50:45.904000Z
+  SNYK-JAVA-ORGAPACHETOMCATEMBED-3225086:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:34.840000Z
+  SNYK-JAVA-ORGAPACHETOMCATEMBED-3326459:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:22.658000Z
+  SNYK-JAVA-ORGAPACHETOMCATEMBED-3369687:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:50:33.818000Z
+  SNYK-JAVA-ORGAPACHETOMCATEMBED-5862028:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:49:44.689000Z
+  SNYK-JAVA-ORGAPACHETOMCATEMBED-5953331:
+  - '*':
+      reason:
+      expires: 2024-05-02T20:46:23.548000Z
+  SNYK-JAVA-ORGAPACHETOMCATEMBED-5959654:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:50:04.746000Z
+  SNYK-JAVA-ORGAPACHETOMCATEMBED-5959972:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:50:08.972000Z
+  SNYK-JAVA-ORGAPACHETOMCATEMBED-6092281:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:47:49.668000Z
+  SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2314720:
+  - '*':
+      reason:
+      expires: 2024-05-02T20:45:33.086000Z
+  SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2320014:
+  - '*':
+      reason:
+      expires: 2024-05-02T20:45:55.320000Z
+  SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2321524:
+  - '*':
+      reason:
+      expires: 2024-05-02T20:46:35.270000Z
+  SNYK-JAVA-ORGAPACHELOGGINGLOG4J-2327339:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:47:13.885000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORKBOOT-5564390:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:14.998000Z
+  SNYK-JAVA-COMFASTERXMLJACKSONCORE-2326698:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:49:07.922000Z
+  SNYK-JAVA-COMFASTERXMLJACKSONCORE-2421244:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:29.591000Z
+  SNYK-JAVA-COMFASTERXMLJACKSONCORE-3038424:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:08.141000Z
+  SNYK-JAVA-COMFASTERXMLJACKSONCORE-3038426:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:11.464000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORKSECURITY-2833359:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:55.715000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORKSECURITY-2833360:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:26.213000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORKSECURITY-3092126:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:48:03.612000Z
+  SNYK-JAVA-ORGSPRINGFRAMEWORKSECURITY-5777893:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:47:10.247000Z
+  snyk:lic:maven:org.aspectj:aspectjweaver:EPL-1.0:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:46:42.014000Z
+  snyk:lic:maven:org.hibernate:hibernate-core:LGPL-2.1:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:46:44.962000Z
+  snyk:lic:maven:com.h2database:h2:(MPL-2.0_OR_EPL-1.0):
+  - '*':
+      reason:
+      expires: 2024-02-16T20:46:39.021000Z
+  snyk:lic:maven:org.hibernate.common:hibernate-commons-annotations:LGPL-2.1:
+  - '*':
+      reason:
+      expires: 2024-02-16T20:46:48.380000Z
