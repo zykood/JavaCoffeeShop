@@ -210,3 +210,35 @@ ignore:
   - '*':
       reason:
       expires: 2024-02-16T20:46:48.380000Z
+  SNYK-JAVA-ORGWEBJARS-451160:
+  - '*':
+      reason:
+      expires: 2024-02-17T20:48:00.602000Z
+  SNYK-JAVA-ORGWEBJARS-451162:
+  - '*':
+      reason:
+      expires: 2024-02-17T20:47:57.527000Z
+  SNYK-JAVA-ORGWEBJARS-451164:
+  - '*':
+      reason:
+      expires: 2024-02-17T20:48:03.606000Z
+  SNYK-JAVA-ORGWEBJARS-451168:
+  - '*':
+      reason:
+      expires: 2024-02-17T20:47:51.767000Z
+  SNYK-JAVA-ORGWEBJARS-479505:
+  - '*':
+      reason:
+      expires: 2024-02-17T20:48:06.624000Z
+  SNYK-JAVA-ORGWEBJARS-479774:
+  - '*':
+      reason:
+      expires: 2024-02-17T20:47:54.528000Z
+  SNYK-JAVA-ORGWEBJARS-479782:
+  - '*':
+      reason:
+      expires: 2024-02-17T20:48:10.696000Z
+  SNYK-JAVA-ORGWEBJARS-567882:
+  - '*':
+      reason:
+      expires: 2024-02-17T20:47:47.580000Z
