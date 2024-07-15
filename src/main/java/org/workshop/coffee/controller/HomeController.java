@@ -25,6 +25,11 @@ public class HomeController {
         this.productService = productService;
         this.searchRepository = searchRepository;
     }
+    @GetMapping({"/", "/index", "/home"})
+    public String homePage(Model model) {
+        model.addAttribute("products", productService.getAllProducts());
+        return "index";
+    }
 
     @PostMapping("/")
     public String searchProducts(Model model, @RequestParam String input) {
