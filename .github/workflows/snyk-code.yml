@@ -12,6 +12,6 @@ jobs:
       - uses: actions/checkout@master
       - uses: snyk/actions/setup@master
       - name: snyk test (code)
-        run: snyk code test
+        run: snyk code test --org=b5ec9e60-ec0e-4bd6-8ad4-85cbe844e8ab
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
