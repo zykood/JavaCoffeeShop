@@ -6,12 +6,22 @@ on:
     branches: [ "main" ]
     
 jobs:
+  snyk-open-source-scan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: snyk/actions/setup@master
+      - name: snyk test (OS)
+        run: snyk test
+        env:
+          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}  
+  
   snyk-code-scan:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
       - uses: snyk/actions/setup@master
       - name: snyk test (code)
-        run: snyk code test --org=b5ec9e60-ec0e-4bd6-8ad4-85cbe844e8ab
+        run: snyk code test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
