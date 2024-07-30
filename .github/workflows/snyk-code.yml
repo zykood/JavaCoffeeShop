@@ -27,3 +27,5 @@ jobs:
     - name: Run Snyk Code
       run: snyk code test -d
       continue-on-error: true
+      env:
+        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
