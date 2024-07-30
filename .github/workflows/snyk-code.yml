@@ -23,4 +23,4 @@ jobs:
         run: snyk config set token ${{ secrets.SNYK_TOKEN }}
 
       - name: Run Snyk Code Scan
-        run: snyk code test -d
+        run: snyk code test -d --org ${{ secrets.SNYK_ORG_ID }}
