@@ -1,3 +1,5 @@
+name: "TruffleHog"
+
 on:
   push:
     branches: [ "main" ]
