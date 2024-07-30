@@ -3,7 +3,9 @@ on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]   
+    branches: 
+      - main
+      - 'boosef-patch-*'
 jobs:
   snyk-code-scan:
     runs-on: ubuntu-latest
@@ -17,6 +19,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Snyk Scan (code)
-      run: snyk code test -d
+      run: snyk code test -d --org={{ secrets.SNYK_ORG_ID }}
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
