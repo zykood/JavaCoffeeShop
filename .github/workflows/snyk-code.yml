@@ -17,6 +17,6 @@ jobs:
         distribution: 'temurin'
         cache: maven
     - name: Snyk Scan (code)
-      run: snyk code test
+      run: snyk code test -d
       env:
         SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
