@@ -15,7 +15,9 @@ jobs:
 
       - name: Install Snyk CLI
         run: |
-          curl -sSL https://snyk.io/install | bash
+          wget -O snyk https://static.snyk.io/cli/latest/snyk-linux
+          chmod +x ./snyk
+          mv ./snyk /usr/local/bin/
 
       - name: Configure Snyk
         run: snyk config set token ${{ secrets.SNYK_TOKEN }}
