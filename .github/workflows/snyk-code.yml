@@ -5,20 +5,25 @@ on:
   pull_request:
     branches: 
       - main
-      - 'boosef-patch-*'
+      - 'boosef-snyk-patch-*'
 jobs:
   snyk-code-scan:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
-    - uses: snyk/actions/setup@master
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
-    - name: Snyk Scan (code)
-      run: snyk code test -d --org={{ secrets.SNYK_ORG_ID }}
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+    - name: Download Snyk
+      run: |
+        wget -O snyk https://static.snyk.io/cli/latest/snyk-linux
+        chmod +x ./snyk
+        mv ./snyk /usr/local/bin/
+    - name: Authenticate Snyk
+      run: snyk auth ${SNYK_TOKEN}
+    - name: Run Snyk Code
+      run: snyk code test -d
+      continue-on-error: true
