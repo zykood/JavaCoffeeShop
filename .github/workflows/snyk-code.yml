@@ -16,7 +16,13 @@ jobs:
 
       - name: Setup Environment 
         uses: snyk/actions/setup@master
-        uses: snyk/actions/maven@master
+
+     - name: Set up JDK 17
+       uses: actions/setup-java@v4
+       with:
+         java-version: '17'
+         distribution: 'temurin'
+         cache: maven
         
       - name: Snyk Scan (code)
         run: snyk code test
