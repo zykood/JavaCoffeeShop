@@ -1,32 +1,24 @@
 name: Snyk Code Scan
+
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
     branches: 
       - main
-      - 'boosef-snyk-patch-*'
+      - boosef-snyk-patch-*
+
 jobs:
   snyk-code-scan:
     runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@master
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: maven
-    - name: Download Snyk
-      run: |
-        wget -O snyk https://static.snyk.io/cli/latest/snyk-linux
-        chmod +x ./snyk
-        mv ./snyk /usr/local/bin/
-    - name: Authenticate Snyk
-      with:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-      run: snyk auth "${SNYK_TOKEN}"
-    - name: Run Snyk Code
-      run: snyk code test -d
-      continue-on-error: true
 
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Snyk CLI
+        run: |
+          curl -sSL https://snyk.io/install | bash
+
+      - name: Configure Snyk
+        run: snyk config set token ${{ secrets.SNYK_TOKEN }}
+
+      - name: Run Snyk Code Scan
+        run: snyk code test
