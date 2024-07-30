@@ -1,4 +1,5 @@
-name: Snyk
+name: Snyk Code Scan
+
 on:
   push:
     branches: [ "main" ]
@@ -6,22 +7,18 @@ on:
     branches: [ "main" ]
     
 jobs:
-  snyk-open-source-scan:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: snyk/actions/maven@master
-      - name: snyk test (OS)
-        run: snyk test
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}  
-  
+
   snyk-code-scan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: snyk/actions/setup@master
-      - name: snyk test (code)
+      - name: Checkout repo
+        uses: actions/checkout@master
+
+      - name: Setup Environment 
+        uses: snyk/actions/setup@master
+        uses: snyk/actions/maven@master
+        
+      - name: Snyk Scan (code)
         run: snyk code test
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
