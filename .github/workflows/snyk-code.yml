@@ -22,6 +22,7 @@ jobs:
       - name: Configure Snyk
         run: | 
           snyk config set api ${{ secrets.SNYK_TOKEN }}
-          snyk code test -d --org ${{ secrets.SNYK_ORG_ID }}
           snyk config get api
+          snyk config set org ${{ secrets.SNYK_ORG_ID }}
+          snyk code test --org ${{ secrets.SNYK_ORG_ID }}
           
