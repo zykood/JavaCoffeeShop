@@ -20,7 +20,8 @@ jobs:
           mv ./snyk /usr/local/bin/
 
       - name: Configure Snyk
-        run: snyk config set api ${{ secrets.SNYK_TOKEN }}
-
-      - name: Run Snyk Code Scan
-        run: snyk code test -d --org ${{ secrets.SNYK_ORG_ID }}
+        run: | 
+          snyk config set api ${{ secrets.SNYK_TOKEN }}
+          snyk code test -d --org ${{ secrets.SNYK_ORG_ID }}
+          snyk config get api
+          
