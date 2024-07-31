@@ -23,5 +23,5 @@ jobs:
         run: | 
           snyk auth ${{ secrets.SNYK_TOKEN }}
           snyk config get api
-          snyk code test --org ${{ secrets.SNYK_ORG_ID }}
+          snyk code test
           
