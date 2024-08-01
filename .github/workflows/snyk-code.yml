@@ -2,9 +2,9 @@ name: Snyk Code Scan
 
 on:
   push:
-    branches: 
-      - main
-      - boosef-snyk-patch-*
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   snyk-code-scan:
@@ -19,7 +19,7 @@ jobs:
           chmod +x ./snyk
           mv ./snyk /usr/local/bin/
 
-      - name: Configure Snyk
+      - name: Configure and run Snyk Code Scan
         run: | 
           snyk auth ${{ secrets.SNYK_TOKEN }}
           snyk config get api
