@@ -1,22 +1,27 @@
 name: Snyk Code Scan
+
 on:
   push:
     branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]   
+    branches: [ "main" ]
+
 jobs:
   snyk-code-scan:
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@master
-    - uses: snyk/actions/setup@master
-    - name: Set up JDK 17
-      uses: actions/setup-java@v4
-      with:
-        java-version: '17'
-        distribution: 'temurin'
-        cache: maven
-    - name: Snyk Scan (code)
-      run: snyk code test -d
-      env:
-        SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+      - uses: actions/checkout@v3
+
+      - name: Install Snyk CLI
+        run: |
+          wget -O snyk https://static.snyk.io/cli/latest/snyk-linux
+          chmod +x ./snyk
+          mv ./snyk /usr/local/bin/
+
+      - name: Configure and run Snyk Code Scan
+        run: | 
+          snyk auth ${{ secrets.SNYK_TOKEN }}
+          snyk config get api
+          snyk code test
+          
