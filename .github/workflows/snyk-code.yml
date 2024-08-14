@@ -22,6 +22,5 @@ jobs:
       - name: Configure and run Snyk Code Scan
         run: | 
           snyk auth ${{ secrets.SNYK_TOKEN }}
-          snyk config get api
           snyk code test
           
