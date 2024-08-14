@@ -1,0 +1,26 @@
+name: Snyk Open Source Scan
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  snyk-os-scan:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Snyk CLI
+        run: |
+          wget -O snyk https://static.snyk.io/cli/latest/snyk-linux
+          chmod +x ./snyk
+          mv ./snyk /usr/local/bin/
+
+      - name: Authenticate and run Snyk Open Source Scan
+        run: | 
+          snyk auth ${{ secrets.SNYK_TOKEN }}
+          snyk test
+          
