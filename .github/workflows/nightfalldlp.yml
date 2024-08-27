@@ -1,0 +1,26 @@
+name: Nightfalldlp Secret Scan
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+      branches:
+      - master
+jobs:
+  run-nightfalldlp:
+    name: nightfalldlp
+    environment: nightfall
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo Action
+        uses: actions/checkout@latest
+
+      - name: NightfallDLP Scan Step
+        uses: nightfallai/nightfall_dlp_action@v2.2.0
+        env:
+          NIGHTFALL_API_KEY: ${{ secrets.NIGHTFALL_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          EVENT_BEFORE: ${{ github.event.before }}
+    permissions:
+      checks: write
+      contents: read
