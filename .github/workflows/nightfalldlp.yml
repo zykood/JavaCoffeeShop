@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo Action
-        uses: actions/checkout@latest
+        uses: actions/checkout@master
 
       - name: NightfallDLP Scan Step
         uses: nightfallai/nightfall_dlp_action@v2.2.0
