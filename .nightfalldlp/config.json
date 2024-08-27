@@ -1,0 +1,49 @@
+{
+  "detectionRules": [
+    {
+      "name": "",
+      "detectors": [
+        {
+          "minNumFindings": 1,
+          "minConfidence": "LIKELY",
+          "displayName": "api key",
+          "detectorType": "NIGHTFALL_DETECTOR",
+          "nightfallDetector": "API_KEY"
+        },
+        {
+          "minNumFindings": 1,
+          "minConfidence": "LIKELY",
+          "displayName": "crypto key",
+          "detectorType": "NIGHTFALL_DETECTOR",
+          "nightfallDetector": "CRYPTOGRAPHIC_KEY"
+        },
+        {
+          "minNumFindings": 1,
+          "minConfidence": "LIKELY",
+          "displayName": "password",
+          "detectorType": "NIGHTFALL_DETECTOR",
+          "nightfallDetector": "PASSWORD_IN_CODE"
+        },
+        {
+          "detectorType": "WORD_LIST",
+          "wordList": {
+            "values": ["key", "credential"],
+            "isCaseSensitive": false
+          },
+         "displayName": "simpleWordListKeyDetector",
+         "minNumFindings": 1,
+         "minConfidence": "POSSIBLE"
+        }
+      ],
+     "logicalOp": "ANY"
+    }
+  ],
+  "fileExclusionList": ["README.md"],
+  "defaultRedactionConfig": {
+    "maskConfig": {
+      "maskingChar": "*",
+      "numCharsToLeaveUnmasked": 2,
+      "charsToIgnore": ["-"]
+    }
+  }
+}
