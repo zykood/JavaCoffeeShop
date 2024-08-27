@@ -34,8 +34,9 @@
          "minNumFindings": 1,
          "minConfidence": "POSSIBLE"
         }
+      ],
+     "logicalOp": "ANY"
     }
-  "logicalOp": "ANY"
   ],
   "fileExclusionList": ["README.md"],
   "defaultRedactionConfig": {
