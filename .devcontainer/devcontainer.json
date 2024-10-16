@@ -17,7 +17,10 @@
 		"vscode": {
 			"extensions": [
 				"snyk-security.snyk-vulnerability-scanner"
-			]
+			],
+			"settings": {
+				"snyk.advanced.authenticationMethod": "token"
+			}
 		}
 	}
 
