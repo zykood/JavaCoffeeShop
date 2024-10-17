@@ -17,9 +17,14 @@
 		"vscode": {
 			"extensions": [
 				"snyk-security.snyk-vulnerability-scanner"
-			]
+			],
+			"settings": {
+				"snyk.advanced.authenticationMethod": "Token authentication"
+			},
+			"snyk.advanced.authenticationMethod": "Token authentication"
 		}
 	}
+
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
